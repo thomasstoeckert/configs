@@ -9,12 +9,12 @@ $submitbutton.on('click', function() {
 });
 
 function katLoadOptions(){
-    var scheme = document.getElementById('scheme-select');
+    var scheme = document.getElementById('schemeselect');
     var vibeTG = document.getElementById('vibeToggle');
     var fetchT = document.getElementById('fetchToggle');
     var dispTG = document.getElementById('displayToggle');
     
-    if(localStorage["scheme-select"]){
+    if(localStorage["schemeselect"]){
         console.log("Found local information");
         scheme.value = localStorage["scheme-select"];
         vibeTG.checked = localStorage["vibeToggle"];
