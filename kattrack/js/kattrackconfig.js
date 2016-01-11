@@ -24,7 +24,7 @@ function katLoadOptions(){
 }
 
 function getAndStoreKatConfigData(){
-    var scheme = document.getElementById('scheme-select');
+    var scheme = document.getElementById('schemeselect');
     var vibeTG = document.getElementById('vibeToggle');
     var fetchT = document.getElementById('fetchToggle');
     var dispTG = document.getElementById('displayToggle');
