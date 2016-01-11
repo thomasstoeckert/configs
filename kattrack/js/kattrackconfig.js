@@ -16,7 +16,7 @@ function katLoadOptions(){
     
     if(localStorage["schemeselect"]){
         console.log("Found local information");
-        scheme.value = localStorage["scheme-select"];
+        scheme.value = localStorage["schemeselect"];
         vibeTG.checked = localStorage["vibeToggle"];
         fetchT.checked = localStorage["fetchToggle"];
         dispTG.checked = localStorage["displayToggle"];
