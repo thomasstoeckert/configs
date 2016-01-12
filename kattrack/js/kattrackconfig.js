@@ -1,6 +1,15 @@
 var $submitbutton = $('#submitButton');
 katLoadOptions();
 
+var rect = getKatQueryParam('rect', 'false');
+var bw = getKatQueryParam('bw', 'true');
+var selectorBox = document.getElementById("selectorbox");
+if(bw === "true"){
+    selectorBox.style.display = "none";
+} else {
+    selectorBox.style.display = "block";
+}
+
 $submitbutton.on('click', function() {
    console.log('Submit');
    
