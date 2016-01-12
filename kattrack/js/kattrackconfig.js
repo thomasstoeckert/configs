@@ -27,9 +27,9 @@ function katLoadOptions(){
         console.log('Found local information');
         scheme.value = localStorage['schemeselect'];
         console.log('Scheme found: ' + scheme.value);
-        vibeTG.checked = localStorage['vibeToggle'];
-        fetchT.checked = localStorage['fetchToggle'];
-        dispTG.checked = localStorage['displayToggle'];
+        vibeTG[0].checked = localStorage['vibeToggle'];
+        fetchT[0].checked = localStorage['fetchToggle'];
+        dispTG[0].checked = localStorage['displayToggle'];
     }
 }
 
@@ -41,9 +41,9 @@ function getAndStoreKatConfigData(){
     
     var options = {
         'scheme': scheme[scheme.selectedIndex].value,
-        'vibeTG': vibeTG.checked,
-        'fetchT': fetchT.checked,
-        'dispTG': dispTG.checked
+        'vibeTG': vibeTG[0].checked,
+        'fetchT': fetchT[0].checked,
+        'dispTG': dispTG[0].checked
     }
     
     localStorage['schemeselect'] = options['scheme'];
