@@ -32,9 +32,9 @@ function getAndStoreKatConfigData(){
     
     var options = {
         scheme: scheme[0].value,
-        vibeTG: vibeTG[0].checked,
-        fetchT: fetchT[0].checked,
-        dispTG: dispTG[0].checked
+        vibeTG: vibeTG.checked,
+        fetchT: fetchT.checked,
+        dispTG: dispTG.checked
     }
     
     localStorage["schemeselect"] = options["scheme"];
