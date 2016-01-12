@@ -27,9 +27,9 @@ function katLoadOptions(){
         console.log('Found local information');
         scheme.value = localStorage['schemeselect'];
         console.log('Scheme found: ' + scheme.value);
-        vibeTG.checked = localStorage['vibeToggle'];
-        fetchT.checked = localStorage['fetchToggle'];
-        dispTG.checked = localStorage['displayToggle'];
+        vibeTG.checked = JSON.parse(localStorage['vibeToggle']);
+        fetchT.checked = JSON.parse(localStorage['fetchToggle']);
+        dispTG.checked = JSON.parse(localStorage['displayToggle']);
     }
 }
 
