@@ -2,7 +2,7 @@ var $submitbutton = $('#submitButton');
 katLoadOptions();
 
 var rect = getKatQueryParam('rect', 'false');
-var bw = getKatQueryParam('bw', 'true');
+var bw = getKatQueryParam('bw', 'false');
 var selectorBox = document.getElementById("selectorbox");
 if(bw === "true"){
     selectorBox.style.display = "none";
