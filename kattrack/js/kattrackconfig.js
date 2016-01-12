@@ -36,7 +36,7 @@ function getAndStoreKatConfigData(){
         dispTG: dispTG.checked
     }
     
-    localStorage["scheme-select"] = options["scheme"];
+    localStorage["schemeselect"] = options["scheme"];
     localStorage["vibeToggle"] = options["vibeTG"];
     localStorage["fetchToggle"] = options["fetchT"];
     localStorage["displayToggle"] = options["dispTG"];
