@@ -1,5 +1,9 @@
 var $submitbutton = $('#submitButton');
+var previewImage = document.getElementById("pimage");
+var divThing = document.getElementById("preview");
+var shape = "chalk";
 katLoadOptions();
+updateDivBorder(shape);
 
 var rect = getKatQueryParam('rect', 'false');
 var bw = getKatQueryParam('bw', 'false');
@@ -9,12 +13,23 @@ if(bw === "true"){
 } else {
     selectorBox.style.display = "block";
 }
+if(rect === "true"){
+    shape = "rect";
+} else {
+    shape = "chalk";
+}
+updateImagePath($('#schemeselect').val());
 
 $submitbutton.on('click', function() {
    console.log('Submit');
    
    var return_to = getKatQueryParam('return_to', 'pebblejs://close#');
    document.location = return_to + encodeURIComponent(JSON.stringify(getAndStoreKatConfigData())); 
+});
+
+$('#schemeselect').change(function(){
+    console.log('Scheme changed to: ' + $(this).val());
+    updateImagePath($(this).val());
 });
 
 function katLoadOptions(){
@@ -64,4 +79,27 @@ function getKatQueryParam(variable, defaultValue){
 		}
 	}
 	return defaultValue || false;
+}
+
+function updateDivBorder(lshape){
+    if(lshape === "chalk"){
+        divThing.style.width = "180px";
+        divThing.style.height = "180px";
+        divThing.style.borderRadius = "180px";
+    } else if (lshape === "rect"){
+        divThing.style.width = "144px";
+        divThing.style.height = "168px";
+        divThing.style.borderRadius = "0px";
+    }
+    divThing.style.margin = "auto";
+    divThing.style.border = "1px solid black";
+    divThing.style.boxShadow = "10px 10px 50px darkgrey";
+    //box-shadow: 10px 10px 50px darkgrey;
+}
+
+function updateImagePath(scheme){
+    var hardwarepath = "images/" + shape + "/" + scheme.toLowerCase() + ".png";
+    console.log('Image path changed to: ' + hardwarepath);
+    previewImage.src = hardwarepath;
+    updateDivBorder(shape);
 }

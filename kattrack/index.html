@@ -2,8 +2,9 @@
 <html>
 
 <head>
-    <link rel='stylesheet' type='text/css' href='../slate/css/slate.min.css'>
-    <link rel='stylesheet' type='text/css' href='css/kattrackconfig.css'>
+    <link rel="stylesheet" type="text/css" href="../slate/css/slate.min.css">
+    <link rel="stylesheet" type="text/css" href="css/kattrackconfig.css">
+    <title>Kattrack Config page</title>
 </head>
 
 <body>
@@ -12,7 +13,7 @@
         <div class="item-container-content">
             <label class="item" id="selectorbox">
                 Scheme
-                <select id="schemeselect" dir='rtl' class="item-select">
+                <select id="schemeselect" dir="rtl" class="item-select">
                     <option class="item-select-option">Cowboy</option>
                     <option class="item-select-option">Hyperactive</option>
                     <option class="item-select-option">Bookworm</option>
@@ -21,6 +22,11 @@
                     <option class="item-select-option">Shy</option>
                 </select>
             </label>
+        </div>
+        <div id="preview" style="margin: auto; width: 144px; height: 168px; border: 1px solid black; box-shadow: 10px 10px 50px darkgrey;">
+                <img id="pimage" src="images/basalt/speedy.png">
+        </div>
+        <div class="item-container-content">
             <label class="item">
                 Vibrate on Disconnect
                 <input type="checkbox" class="item-toggle" id="vibeToggle">
