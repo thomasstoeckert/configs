@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../slate/css/slate.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <title>Template Config Page</title>
+</head>
+
+<body>
+    <div class="item-container">
+        <div class="item-container">
+            <div class="item-container-header">Rotation Controls</div>
+            <div class="item-container-content">
+                <label class="item">
+                    Rotation
+                    <input type="range" class="item-slider" name="rotation_slider" value="9.9">
+                        <div class="item-input-wrapper item-slider-text">
+                            <input type="text" class="item-input" name="rotation_slider" value="9.9" max="180" min="0" step="0.1">
+                        </div>
+                    </label>
+                <label class="item">
+                    Left/Right Toggle
+                    <input type="checkbox" class="item-toggle" name="negative_toggle">
+                </label>
+                <div class="button-container">
+                    <input type="button" class="item-button" value="RESET">
+                </div>
+            </div>
+        </div>
+        <div class="item-container">
+            <div class="item-container-header">Data Controls</div>
+            <div class="item-container-content">
+                <label class="item">
+                    Show Date
+                    <input type="checkbox" class="item-toggle" name="date_toggle">
+                </label>
+                <label class="item">
+                    Show Battery Text
+                    <input type="checkbox" class="item-toggle" name="battery_toggle">
+                </label>
+            </div>
+        </div>
+        <div class="item-container">
+            <div class="item-container-header">Visual Controls</div>
+            <div class="item-container-content">
+                <label class="item">
+                    Show Monorail
+                    <input type="checkbox" class="item-toggle" name="monorail_toggle">
+                </label>
+                <label class="item">
+                    Collection
+                    <select name="collection_select" dir="rtl" class="item-select">
+                        <option class="item-select-option">Standard</option>
+                        <option class="item-select-option">Retro</option>
+                    </select>
+                </label>
+                <label class="item">
+                    Theme
+                    <select name="standard_select" dir="rtl" class="item-select">
+                        <option class="item-select-option">Night</option>
+                        <option class="item-select-option">Daybreak</option>
+                        <option class="item-select-option">Classic</option>
+                    </select>
+                </label>
+                <label class="item">
+                    Theme
+                    <select name="retro_select" dir="rtl" class="item-select">
+                        <option class="item-select-option">Epcot</option>
+                        <option class="item-select-option">The Land</option>
+                        <option class="item-select-option">Communicore</option>
+                        <option class="item-select-option">Spaceship Earth</option>
+                        <option class="item-select-option">The Seas</option>
+                        <option class="item-select-option">Journey into Imagination</option>
+                        <option class="item-select-option">Horizons</option>
+                        <option class="item-select-option">Universe of Energy</option>
+                        <option class="item-select-option">World of Motion</option>
+                    </select>
+                </label>
+            </div>
+        </div>
+        <div class="item-container">
+            <!-- Here be submit button -->
+            <input id="submitButton" type="button" class="item-button" value="send">
+        </div>
+    </div>
+    <script src="../slate/js/slate.min.js"></script>
+    <script src="js/config.js"></script>
+</body>
+
+</html>
